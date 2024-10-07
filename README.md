@@ -16,9 +16,8 @@ ReactJs is a popular JavaScript library for building user interfaces. It is main
 #### How to javascript work ?
 
 Whenever we run the JS code our browser th browser has a Js engine, every JS engine has a parser, in which parser our JS code checks it line by line is the syntax wise correct or note? Because Javascript is an interpreted language. And this is where an error occurs in its code, and parser stops executing its.
-When the parser produce the ATS(Abstract Syntax Tree).
-
-The Js code is translated into machine code with the help of ATS and when it gets converted into machine code only then the actual code runs.
+When the parser produce the ATS(Abstract Syntax Tree).\
+The Js code is translated into machine code with the he lp of ATS and when it gets converted into machine code only then the actual code runs.
 
 #### Execution Context
 
