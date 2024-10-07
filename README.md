@@ -20,14 +20,29 @@ When the parser produce the ATS(Abstract Syntax Tree).\
 The Js code is translated into machine code with the he lp of ATS and when it gets converted into machine code only then the actual code runs.
 
 #### Execution Context
+
 Execution context is the environment in which our code is executed and is evaluated. \
 Whenever we write code an environment is required to run that Js code. The environment where we run and evaluate our code is called execution context. \
 There is also an execution context inside the execution context which we call global execution context. This is by default.
 
 By default means: \
+
     Js engine created the global execution context before the start to execute any code.
 
-*** *Variable and function that not inside any function. A new execution context get create every time a function is executed***
+***Variable and function that not inside any function. A new execution context get create every time a function is executed***
 
 **Note**
 Until we call the function, it remains in the global execution context, but as soon as we call the function and it is executed, each function get a new execution context.
+
+#### Execution stack 
+
+Execution stack also know as "calling stack" is a stack with a LIFO structure, which is used to store all the execution context during the code execution. \
+
+Execution context has two phase.
+***(I) Creation phase***
+in this creation phase three properties 
+***(i) Variable object*** 
+***(ii)Scope chain***
+***(iii)this variable**
+
+***(II) Execution phase***
