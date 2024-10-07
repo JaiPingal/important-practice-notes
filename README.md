@@ -40,12 +40,32 @@ Execution stack also know as "calling stack" is a stack with a LIFO structure, w
 
 Execution context has two phase.
 
-***(I) Creation phase*** 
+**(I) Creation phase**
 
 in this creation phase three properties 
 
 ***(i) Variable object*** \
 ***(ii)Scope chain*** \
-***(iii)this variable** \
+***(iii)this variable***
 
-***(II) Execution phase***
+**(II) Execution phase**
+
+#### Variable object:-
+
+(1) for each function (function declaration) a property is created in  the variable object, which pointing to that function\
+
+***Means:-*** \
+First of all in  the creation phase it is checked where the function is being declaration and where the functions is being declared; a property is created inside the variable object and it is pointed.
+
+(2) For each variable (Variable declaration) a property is created in the variable object then set to undefined.
+
+**Note**
+This line 1 or line 2 is called Hosting in Javascript 
+
+***Hosting***
+
+Hosting is a Javascript mechanism where variable and function declaration are move top of there scope before code execution. \
+In Javascript, where code is created in the creation phase, all the variables the top of there scope before the code is executed
+
+**Note**
+Hosting works only on function declaration or var keyword not in function execution and fat Arrow function and let & const
