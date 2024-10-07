@@ -44,8 +44,8 @@ Execution context has two phase.
 
 in this creation phase three properties 
 
-***(i) Variable object*** /
-***(ii)Scope chain*** /
-***(iii)this variable** /
+***(i) Variable object*** \
+***(ii)Scope chain*** \
+***(iii)this variable** \
 
 ***(II) Execution phase***
