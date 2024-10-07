@@ -19,8 +19,7 @@ Whenever we run the JS code our browser th browser has a Js engine, every JS eng
 When the parser produce the ATS(Abstract Syntax Tree).\
 The Js code is translated into machine code with the he lp of ATS and when it gets converted into machine code only then the actual code runs.
 
-#### Execution Context
-
+#### Execution Context 
     Execution context is the environment in which our code is executed and is evaluated. \
 Whenever we write code an environment is required to run that Js code. The environment where we run and evaluate our code is called execution context. \
 There is also an execution context inside the execution context which we call global execution context. This is by default.
