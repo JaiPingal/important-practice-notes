@@ -39,10 +39,13 @@ Until we call the function, it remains in the global execution context, but as s
 Execution stack also know as "calling stack" is a stack with a LIFO structure, which is used to store all the execution context during the code execution. \
 
 Execution context has two phase.
-***(I) Creation phase***
+
+***(I) Creation phase*** 
+
 in this creation phase three properties 
-***(i) Variable object*** 
-***(ii)Scope chain***
-***(iii)this variable**
+
+***(i) Variable object*** /
+***(ii)Scope chain*** /
+***(iii)this variable** /
 
 ***(II) Execution phase***
