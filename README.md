@@ -173,3 +173,75 @@ function callback() {
 };
 asyncOperation(callback)
 ```
+
+#### Closures
+
+A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives a function access to its outer scope. In JavaScript, closures are created every time a function is created, at function creation time.
+
+```js
+function init() {
+    var name = "Mozilla"; // name is a local variable created by init
+    function displayName() {
+        // displayName() is the inner function, that forms a closure
+        console.log(name); // use variable declared in the parent function
+    }
+    displayName();
+}
+
+init();
+```
+
+```js
+const makeCounter = function() {
+    let privateCounter = 0;
+
+    function changeBy(val) {
+        privateCounter += val;
+    }
+    return {
+        increment() {
+            changeBy(1);
+        },
+
+        decrement() {
+            changeBy(-1);
+        },
+
+        value() {
+            return privateCounter;
+        },
+    };
+};
+
+const counter1 = makeCounter();
+const counter2 = makeCounter();
+
+console.log(counter1.value()); // 0.
+
+counter1.increment();
+counter1.increment();
+console.log(counter1.value()); // 2.
+
+counter1.decrement();
+console.log(counter1.value()); // 1.
+console.log(counter2.value()); // 0.
+```
+
+```js
+// global scope
+const e = 10;
+
+function sum(a) {
+    return function(b) {
+        return function(c) {
+            // outer functions scope
+            return function(d) {
+                // local scope
+                return a + b + c + d + e;
+            };
+        };
+    };
+}
+
+console.log(sum(1)(2)(3)(4)); // 20
+```
