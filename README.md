@@ -26,8 +26,7 @@ Whenever we write code an environment is required to run that Js code. The envir
 There is also an execution context inside the execution context which we call global execution context. This is by default.
 
 By default means: \
-
-    Js engine created the global execution context before the start to execute any code.
+Js engine created the global execution context before the start to execute any code.
 
 ***Variable and function that not inside any function. A new execution context get create every time a function is executed***
 
@@ -69,3 +68,106 @@ In Javascript, where code is created in the creation phase, all the variables th
 
 **Note**
 Hosting works only on function declaration or var keyword not in function execution and fat Arrow function and let & const
+
+##### Scop Chain
+
+The scop chain is used to resolved the value of variable name in Javascript. \
+If we are writing code in javascript than scop chain helps us in determining which variable should have which value. \
+
+Scop chain in javascript is lexically defined which means that we can see what the scop chain will be by looking at the code.
+
+At the top of hte scop chain is the global scop, which is the window object in the browser.
+
+***Lexically scoping:-*** \
+A function that is lexically within another function get access to the scop or the outer function. \
+***(inner function can get to access to there parent function variable but the vice-versa is not true.)***
+
+#### this keyword
+
+'this' keyword refers to an object that is executing the current piece of code, it references the object is executing the current function being referenced is a 'regular function' "this" references the global object. If the function that is being referenced is a method in an object "this" references the object itself.
+
+#### Event loop in Javascript
+
+Javascript event loop is the core mechanism that enables asynchronous operations. \
+Though single-threaded, it manages task efficiency.
+
+Imagine it as a queue system events like user interactions or networks requests are added to the queue, and the engine processes then one by one.
+
+This allows javascript to handle non-blocking tasks without freezing keeping the application responsive event white waiting for data or other operations.
+
+***Javascript is a Synchronous Single-threaded language. Means: Javascript code is runs in one line at a time***
+
+#### Micro-tasks and Macro-tasks in event loop.
+
+Javascript has a concurrency model based on an event loop, which is responsible for executing events and executing queued Sun-tasks.
+
+**Concurrency Model Meaning:-** \
+In concurrency modeling, object for a board are allocated to tasks that appear to run simultaneously.
+
+Within the Event Loop there are are actually 2 types of queues:
+***(i)macro tasks queue(or just collect the task queue)*** \
+***(ii)micro tasks queue***
+
+#### Macro-task:
+
+A macro task queue is a short function which is executed after the function or program which created it exits and only if the javascript execution task is empty.
+***Promise callback*** \
+***queue Micro tasks***
+
+#### Macro-task:
+
+A macro tasks is short function which is executed after javascript execution stack and micro tasks are empty
+***SetTimeout*** \
+***SetInterval*** \
+***SetIntermediate*** 
+
+#### Callback function():-
+
+Any function that is passed as an argument is called callback function.\
+* A callback is a function that to be executed after another function has finished executing - hance the name callback function. \
+***OR**
+* Callback functions are functions that are called after the first function completes its task. They are often used to handle asynchronous events and make your code more readable. 
+**Why callback function?**
+
+Callback functions are important in JavaScript because they let you create asynchronous code that doesn’t block the main thread of execution. This enables you to perform other tasks, such as user interface (UI) updates or other API calls, while an asynchronous action is executing.
+
+**When to Use a Callback Function?**
+
+* When making an asynchronous API call.
+* When listening for events.
+* When running a long-running task.
+* When working with promises.
+
+**Synchronous vs Asynchronous Callback Functions**
+Synchronous callback functions execute instantly, but asynchronous callback functions execute at a later time.
+
+* Synchronous Callback:-
+
+```js
+function greet(name, callback) {
+    console.log(`Hello ${name}`);
+    callback()
+};
+
+function sayGoodbye() {
+    console.log("Goodby!")
+};
+greet("Jai", sayGoodbye)
+```
+
+* asynchronous callback:-
+
+```js
+function asyncOperation(callback) {
+    console.log("Start of Operation");
+    setTimeout(function() {
+        callback();
+    }, 1000);
+    console.log("End of Operation");
+};
+
+function callback() {
+    console.log("Callback executed")
+};
+asyncOperation(callback)
+```
