@@ -25,7 +25,7 @@ Execution context is the environment in which our code is executed and is evalua
 Whenever we write code an environment is required to run that Js code. The environment where we run and evaluate our code is called execution context. \
 There is also an execution context inside the execution context which we call global execution context. This is by default.
 
-By default means: \
+By default means:
 Js engine created the global execution context before the start to execute any code.
 
 ***Variable and function that not inside any function. A new execution context get create every time a function is executed***
