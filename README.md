@@ -25,12 +25,12 @@ Execution context is the environment in which our code is executed and is evalua
 Whenever we write code an environment is required to run that Js code. The environment where we run and evaluate our code is called execution context. \
 There is also an execution context inside the execution context which we call global execution context. This is by default.
 
-By default means:
-Js engine created the global execution context before the start to execute any code.
+By default means:-
+*Js engine created the global execution context before the start to execute any code.*
 
 ***Variable and function that not inside any function. A new execution context get create every time a function is executed***
 
-**Note**
+**Note:-**
 Until we call the function, it remains in the global execution context, but as soon as we call the function and it is executed, each function get a new execution context.
 
 #### Execution stack 
@@ -58,7 +58,7 @@ First of all in  the creation phase it is checked where the function is being de
 
 (2) For each variable (Variable declaration) a property is created in the variable object then set to undefined.
 
-**Note**
+**Note:-**
 This line 1 or line 2 is called Hosting in Javascript 
 
 ***Hosting***
@@ -66,7 +66,7 @@ This line 1 or line 2 is called Hosting in Javascript
 Hosting is a Javascript mechanism where variable and function declaration are move top of there scope before code execution. \
 In Javascript, where code is created in the creation phase, all the variables the top of there scope before the code is executed
 
-**Note**
+**Note:-**
 Hosting works only on function declaration or var keyword not in function execution and fat Arrow function and let & const
 
 ##### Scop Chain
@@ -105,12 +105,13 @@ Javascript has a concurrency model based on an event loop, which is responsible 
 In concurrency modeling, object for a board are allocated to tasks that appear to run simultaneously.
 
 Within the Event Loop there are are actually 2 types of queues:
+
 ***(i)macro tasks queue(or just collect the task queue)*** \
 ***(ii)micro tasks queue***
 
 #### Macro-task:
 
-A macro task queue is a short function which is executed after the function or program which created it exits and only if the javascript execution task is empty.
+A macro task queue is a short function which is executed after the function or program which created it exits and only if the javascript execution task is empty. \
 ***Promise callback*** \
 ***queue Micro tasks***
 
@@ -121,11 +122,11 @@ A macro tasks is short function which is executed after javascript execution sta
 ***SetInterval*** \
 ***SetIntermediate*** 
 
-#### Callback function():-
+#### Callback function()
 
 Any function that is passed as an argument is called callback function.\
 * A callback is a function that to be executed after another function has finished executing - hance the name callback function. \
-***OR**
+**OR**
 * Callback functions are functions that are called after the first function completes its task. They are often used to handle asynchronous events and make your code more readable. 
 **Why callback function?**
 
@@ -139,7 +140,8 @@ Callback functions are important in JavaScript because they let you create async
 * When working with promises.
 
 **Synchronous vs Asynchronous Callback Functions**
-Synchronous callback functions execute instantly, but asynchronous callback functions execute at a later time.
+
+***Synchronous callback functions execute instantly, but asynchronous callback functions execute at a later time.***
 
 * Synchronous Callback:-
 
@@ -155,7 +157,7 @@ function sayGoodbye() {
 greet("Jai", sayGoodbye)
 ```
 
-* asynchronous callback:-
+* Asynchronous callback:-
 
 ```js
 function asyncOperation(callback) {
