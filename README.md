@@ -22,6 +22,7 @@ The Js code is translated into machine code with the he lp of ATS and when it ge
 **JS Engine:-**
 * The JavaScript engine is simply a computer program that interprets JavaScript code. The engine is responsible for executing the code.
 * Any JavaScript engine typically contains a call stack and a heap. The call stack is where the code is executed. The heap is an unstructured memory pool that stores all the objects needed for the application.
+- - -
 
 #### Execution Context
 
