@@ -13,11 +13,15 @@ ReactJs is a popular JavaScript library for building user interfaces. It is main
 
 - - - -
 
-#### How to javascript work ?
+#### How Does JavaScript Work Behind the Scenes?
 
 Whenever we run the JS code our browser th browser has a Js engine, every JS engine has a parser, in which parser our JS code checks it line by line is the syntax wise correct or note? Because Javascript is an interpreted language. And this is where an error occurs in its code, and parser stops executing its.
 When the parser produce the ATS(Abstract Syntax Tree).\
 The Js code is translated into machine code with the he lp of ATS and when it gets converted into machine code only then the actual code runs.
+
+**JS Engine:-**
+* The JavaScript engine is simply a computer program that interprets JavaScript code. The engine is responsible for executing the code.
+* Any JavaScript engine typically contains a call stack and a heap. The call stack is where the code is executed. The heap is an unstructured memory pool that stores all the objects needed for the application.
 
 #### Execution Context
 
@@ -245,14 +249,17 @@ function sum(a) {
 
 console.log(sum(1)(2)(3)(4)); // 20
 ```
+
 #### IIFE
+
 An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined. \
 It is a design pattern which is also known as a Self-Executing Anonymous Function and contains two major parts:
 * The first is the anonymous function with lexical scope enclosed within the grouping operator (). This prevents accessing variables within the IIFE idiom as well as polluting the global scope.
 * The second part creates the immediately invoked function expression () through which the JavaScript engine will directly interpret the function.
+
 ```js
-(function(value){
+(function(value) {
     var greet = 'Hello';
-    console.log(greet+ ' ' + value);
-  })('IIFEs');
+    console.log(`${greet} ${value}`);
+})('IIFEs');
 ```
