@@ -13,7 +13,7 @@ ReactJs is a popular JavaScript library for building user interfaces. It is main
 
 - - - -
 
-#### How Does JavaScript Work Behind the Scenes?
+### How Does JavaScript Work Behind the Scenes?
 
 Whenever we run the JS code our browser th browser has a Js engine, every JS engine has a parser, in which parser our JS code checks it line by line is the syntax wise correct or note? Because Javascript is an interpreted language. And this is where an error occurs in its code, and parser stops executing its.
 When the parser produce the ATS(Abstract Syntax Tree).\
@@ -37,7 +37,7 @@ By default means:-
 **Note:-**
 Until we call the function, it remains in the global execution context, but as soon as we call the function and it is executed, each function get a new execution context.
 
-#### Execution stack 
+### Execution stack 
 
 Execution stack also know as "calling stack" is a stack with a LIFO structure, which is used to store all the execution context during the code execution. \
 
@@ -73,7 +73,7 @@ In Javascript, where code is created in the creation phase, all the variables th
 **Note:-**
 Hosting works only on function declaration or var keyword not in function execution and fat Arrow function and let & const
 
-##### Scop Chain
+#### Scop Chain
 
 The scop chain is used to resolved the value of variable name in Javascript. \
 If we are writing code in javascript than scop chain helps us in determining which variable should have which value. \
@@ -90,7 +90,7 @@ A function that is lexically within another function get access to the scop or t
 
 'this' keyword refers to an object that is executing the current piece of code, it references the object is executing the current function being referenced is a 'regular function' "this" references the global object. If the function that is being referenced is a method in an object "this" references the object itself.
 
-#### Event loop in Javascript
+### Event loop in Javascript
 
 Javascript event loop is the core mechanism that enables asynchronous operations. \
 Though single-threaded, it manages task efficiency.
@@ -126,12 +126,13 @@ A macro tasks is short function which is executed after javascript execution sta
 ***SetInterval*** \
 ***SetIntermediate*** 
 
-#### Callback function()
+### Callback function()
 
 Any function that is passed as an argument is called callback function.\
 * A callback is a function that to be executed after another function has finished executing - hance the name callback function. \
 **OR**
 * Callback functions are functions that are called after the first function completes its task. They are often used to handle asynchronous events and make your code more readable. 
+
 **Why callback function?**
 
 Callback functions are important in JavaScript because they let you create asynchronous code that doesn’t block the main thread of execution. This enables you to perform other tasks, such as user interface (UI) updates or other API calls, while an asynchronous action is executing.
@@ -178,7 +179,7 @@ function callback() {
 asyncOperation(callback)
 ```
 
-#### Closures
+### Closures
 
 A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives a function access to its outer scope. In JavaScript, closures are created every time a function is created, at function creation time.
 
@@ -263,15 +264,9 @@ function sum(a) {
 }
 
 console.log(sum(1)(2)(3)(4)); // 20
-
 ```
-***
 
----
-
-_________________
-
-#### IIFE
+### IIFE
 
 An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined. \
 It is a design pattern which is also known as a Self-Executing Anonymous Function and contains two major parts:
