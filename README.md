@@ -232,7 +232,22 @@ console.log(counter2.value()); // 0.
 ```
 
 ```js
-// global scope
+function sayHello() {
+    var say = function() {
+        console.log(hello)
+    };
+    // local variable that ends up within the closure
+    var hello = "Hello world"
+    return say
+};
+var sayHelloClosure = sayHello()
+sayHelloClosure()
+```
+
+***Exp:-*** Notice how the variable hello is defined after the anonymous function but  can still access the hello variable. This is because the hello variable has already been defined in the function scop at the time of creation making it accessible when the anonymous function is finally executed.
+
+```js
+// global scope and closure with curring
 const e = 10;
 
 function sum(a) {
@@ -248,7 +263,9 @@ function sum(a) {
 }
 
 console.log(sum(1)(2)(3)(4)); // 20
+
 ```
+-----
 
 #### IIFE
 
@@ -299,4 +316,5 @@ console.log(twentyPresentOff(100))
 
 ***Exp:*** ApplyDiscount() function takes a 'discount' argument and return a new function that takes a 'price' argument and calculate the discounted price.
 
-**Note:-** Curring is a specific technique of transforming a function takes multiple arguments into a sequence of functions each taking a single argument.
+**Note:-** Curring is a specific technique of transforming a function takes multiple arguments into a sequence of functions each taking a single argument. \
+*Currying helps you avoid passing the same variable multiple times, and it helps you create a higher order function.
