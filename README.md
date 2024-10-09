@@ -22,7 +22,6 @@ The Js code is translated into machine code with the he lp of ATS and when it ge
 **JS Engine:-**
 * The JavaScript engine is simply a computer program that interprets JavaScript code. The engine is responsible for executing the code.
 * Any JavaScript engine typically contains a call stack and a heap. The call stack is where the code is executed. The heap is an unstructured memory pool that stores all the objects needed for the application.
---
 
 #### Execution Context
 
@@ -264,3 +263,40 @@ It is a design pattern which is also known as a Self-Executing Anonymous Functio
     console.log(`${greet} ${value}`);
 })('IIFEs');
 ```
+
+#### Function Curring
+
+Curring is a technic of evaluating function with multiple arguments into sequence of function with single argument.
+
+***In other words:*** when a function instead to taking are argument at one time takes the first one return a new function, the new function which takes the third one, and so forth, until all arguments have been fulfilled.
+
+```js
+function multiply(a) {
+    return function(b) {
+        return function(c) {
+            return a * b * c;
+        };
+    };
+};
+
+const curringMultiply = multiply(2)(3)(4);
+console.log(curringMultiply)
+```
+
+```js
+function applyDiscount(discount) {
+    return function(price) {
+        return price - (price * discount)
+    };
+};
+
+const tenPresentOff = applyDiscount(0.10)
+const twentyPresentOff = applyDiscount(0.20)
+
+console.log(tenPresentOff(100));
+console.log(twentyPresentOff(100))
+```
+
+***Exp:*** ApplyDiscount() function takes a 'discount' argument and return a new function that takes a 'price' argument and calculate the discounted price.
+
+**Note:-** Curring is a specific technique of transforming a function takes multiple arguments into a sequence of functions each taking a single argument.
